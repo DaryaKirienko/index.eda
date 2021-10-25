@@ -91,7 +91,7 @@ body {
   background-color: grey;
   color: #fff;
   border-radius: 20px;
-  min-height: 400px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   padding: 100px;
@@ -100,7 +100,7 @@ body {
 }
 
 .slide-content {
-  max-width: 400px;
+  max-width: 500px;
   position: relative;
 }
 
@@ -117,6 +117,22 @@ body {
   font-size: 16px;
   line-height: 23px;
   margin-bottom: 30px;
+}
+
+.swiper {
+  position: relative;
+}
+
+.slider-buttons {
+  position: absolute;
+  bottom: 40px;
+  right: 46px;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .button-primary {
@@ -140,6 +156,18 @@ body {
 
 .slide-summer {
   background-image: url("../img/summer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide-vitamines {
+  background-image: url("../img/vitamines.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide-vegetables {
+  background-image: url("../img/vegetables.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -330,6 +358,8 @@ body {
   padding: 0;
   list-style: none;
   margin-bottom: 62px;
+
+  overflow: hidden;
 }
 
 .tabs-link {
@@ -348,13 +378,16 @@ body {
   display: flex;
   margin: -15px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .tabs-card {
   max-width: 270px;
   border-radius: 20px;
+  margin: 15px;
   overflow: hidden;
   background-color: #fff;
+  margin-bottom: 15px;
 }
 
 .tabs-image {
@@ -432,6 +465,7 @@ body {
   display: flex;
   padding: 0;
   margin-top: 52px;
+  flex-wrap: wrap;
 }
 
 .benefits-item {
@@ -504,4 +538,114 @@ body {
 .social-link {
   margin-left: 20px;
   text-decoration: none;
+}
+
+@media (max-width: 1260px) {
+  .container {
+    max-width: 960px;
+  }
+  .search-form {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .tabs-content {
+    flex-wrap: wrap;
+  }
+  .tabs-card {
+    flex: 50%;
+    max-width: calc(50% - 30px);
+  }
+  .benefits-item {
+    width: calc(50% - 36px);
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 760px;
+  }
+  .slide {
+    padding: 70px;
+  }
+  .delivery-card {
+    width: calc(50% - 30px);
+  }
+  .benefits-item {
+    width: calc(50% - 36px);
+  }
+  .footer-logo {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .search-form {
+    order: 5;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .shopping-cart {
+    margin-right: 15px;
+  }
+  .login {
+    margin-left: 10px;
+  }
+  .promo {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
+  .delivery-card {
+    width: 100%;
+  }
+  .tabs-card {
+    max-width: 100%;
+  }
+  .benefits-item {
+    width: 100%;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+  }
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .footer-logo {
+    margin-bottom: 25px;
+    margin-right: 0;
+  }
+  .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    text-align: center;
+  }
+  .footer-link {
+    margin-left: 0;
+  }
+  .social-link {
+    margin-left: 0;
+  }
+  .social-links {
+    margin-left: 0;
+    margin-top: 25px;
+    width: 140px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-link {
+    margin-right: 25px;
+  }
+  .slider-buttons {
+    bottom: 15px;
+    right: 40%;
+  }
 }
